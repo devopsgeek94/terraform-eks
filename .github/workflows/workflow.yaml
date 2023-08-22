@@ -14,5 +14,6 @@ jobs:
         uses: actions/checkout@v2
       
       - uses: hashicorp/setup-terraform@v2
+      - run: ls -al
       - run: terraform init
       - run: terraform plan
