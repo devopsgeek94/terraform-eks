@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@v2
-
-      - name: 'Terraform commands'
-        #shell: pwsh
-        run: |
-          terraform init
+      
+      - uses: hashicorp/setup-terraform@v2
+      - run: terraform init
